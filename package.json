@@ -1,0 +1,20 @@
+{
+  "name": "worm-life",
+  "version": "0.1.0",
+  "description": "WORM LIFE — Vinh Làm Game",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "phaser": "^3.90.0"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4"
+  },
+  "private": true,
+  "type": "module"
+}

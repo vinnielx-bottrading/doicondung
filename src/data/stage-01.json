@@ -1,0 +1,82 @@
+{
+  "id": "stage-01",
+  "name": "The First Leaf",
+  "areaId": "garden-after-rain",
+  "world": { "width": 2400, "height": 1200 },
+  "objective": {
+    "id": "collect-organic-matter",
+    "text": "Find 3 pieces of organic matter, then reach the safe burrow",
+    "targetCount": 3
+  },
+  "completionReward": {
+    "growthStage": "young",
+    "unlockStageId": "stage-02",
+    "discoveryId": "first-safe-burrow"
+  },
+  "playerStart": { "pathId": "surface", "s": 140, "dir": 1 },
+  "paths": [
+    {
+      "id": "surface",
+      "kind": "surface",
+      "points": [[40, 380], [260, 372], [420, 384], [600, 376], [820, 368], [1050, 380], [1300, 386], [1520, 374], [1760, 370], [1900, 382], [2100, 376], [2360, 372]]
+    },
+    {
+      "id": "tunnel-a",
+      "kind": "tunnel",
+      "points": [[420, 384], [436, 430], [462, 500], [520, 560], [620, 590], [760, 600], [870, 576], [950, 520], [1010, 450], [1050, 380]]
+    },
+    {
+      "id": "tunnel-b",
+      "kind": "tunnel",
+      "points": [[760, 600], [790, 670], [860, 740], [980, 790], [1150, 812], [1330, 800], [1480, 818], [1610, 850], [1720, 862]]
+    },
+    {
+      "id": "tunnel-c",
+      "kind": "tunnel",
+      "points": [[1900, 382], [1895, 450], [1872, 540], [1830, 640], [1790, 740], [1750, 820], [1720, 862]]
+    }
+  ],
+  "transitions": [
+    { "id": "mouth-a-west", "x": 420, "y": 384, "paths": ["surface", "tunnel-a"], "label": "Enter the tunnel" },
+    { "id": "mouth-a-east", "x": 1050, "y": 380, "paths": ["surface", "tunnel-a"], "label": "Enter the tunnel" },
+    { "id": "fork-ab", "x": 760, "y": 600, "paths": ["tunnel-a", "tunnel-b"], "label": "Take the deep route" },
+    { "id": "mouth-c", "x": 1900, "y": 382, "paths": ["surface", "tunnel-c"], "label": "Enter the tunnel" },
+    { "id": "burrow-link", "x": 1720, "y": 862, "paths": ["tunnel-b", "tunnel-c"] }
+  ],
+  "chambers": [
+    { "id": "safe-burrow", "x": 1720, "y": 862, "rx": 58, "ry": 32 }
+  ],
+  "decor": {
+    "roots": [
+      { "points": [[300, 392], [312, 470], [292, 560], [326, 650], [310, 720]], "width": 10 },
+      { "points": [[660, 386], [676, 450], [650, 500]], "width": 6 },
+      { "points": [[1180, 392], [1168, 480], [1214, 600], [1190, 700], [1236, 770]], "width": 12 },
+      { "points": [[1450, 386], [1482, 470], [1460, 560], [1522, 660]], "width": 8 },
+      { "points": [[2050, 388], [2072, 500], [2040, 620], [2092, 760], [2062, 900], [2100, 1000]], "width": 14 },
+      { "points": [[2072, 500], [2150, 540], [2210, 620]], "width": 6 }
+    ],
+    "stones": [
+      { "x": 600, "y": 470, "rx": 34, "ry": 22 },
+      { "x": 1300, "y": 640, "rx": 48, "ry": 30 },
+      { "x": 2160, "y": 560, "rx": 40, "ry": 26 },
+      { "x": 980, "y": 690, "rx": 26, "ry": 18 },
+      { "x": 1560, "y": 990, "rx": 64, "ry": 36 },
+      { "x": 480, "y": 900, "rx": 46, "ry": 28 },
+      { "x": 2260, "y": 870, "rx": 38, "ry": 24 },
+      { "x": 200, "y": 620, "rx": 22, "ry": 15 }
+    ],
+    "leaves": [
+      { "x": 230, "y": 372, "angle": 0.1, "length": 56 },
+      { "x": 700, "y": 373, "angle": -0.08, "length": 74 },
+      { "x": 1600, "y": 371, "angle": 0.06, "length": 92 },
+      { "x": 2220, "y": 374, "angle": -0.05, "length": 62 }
+    ],
+    "puddles": [
+      { "x": 1300, "y": 388, "width": 130 }
+    ]
+  },
+  "food": [],
+  "creatures": [],
+  "discoveries": [],
+  "hazards": []
+}
